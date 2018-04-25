@@ -4,6 +4,7 @@
 
 def row_mod (M, i, j, x):
     M[i] = [a + x * b for a, b in zip(M[i], M[j])]
+    print(M)
 
 
 """Bringe die Matrix in Reihen-Stufen-Form"""
@@ -77,9 +78,7 @@ def onone(M):
 def process(M):
     print(M)
     row_echelon(M)
-    print(M)
     jordan(M)
-    print(M)
     N = onone(M)
     print(N)
     return N
